@@ -33,7 +33,7 @@ async def aiRes(_, message):
             await message.reply("Mausam kharab hai ! Thode der mein try kre !\nor Report to Developer.")
     else:
         btn = [[
-            InlineKeyboardButton('ðŸ’¡ Support Group ðŸ’¡', url=SUPPORT_LINK)
+            InlineKeyboardButton('💡 Support Group 💡', url=SUPPORT_LINK)
         ]]
         await message.reply(f"<b>hey {message.from_user.mention},\n\nPlease use this command in support group.</b>", reply_markup=InlineKeyboardMarkup(btn))
         
@@ -48,8 +48,8 @@ async def start(client, message):
             await db.add_chat(message.chat.id, message.chat.title)
         wish = get_wish()
         btn = [[
-            InlineKeyboardButton('âš¡ï¸ á´œá´˜á´…á´€á´›á´‡s á´„Êœá´€É´É´á´‡ÊŸ âš¡ï¸', url=UPDATES_LINK),
-            InlineKeyboardButton('ðŸ’¡ Support Group ðŸ’¡', url=SUPPORT_LINK)
+            InlineKeyboardButton('⚡️ ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ ⚡️', url=UPDATES_LINK),
+            InlineKeyboardButton('💡 Support Group 💡', url=SUPPORT_LINK)
         ]]
         await message.reply(text=f"<b>Êœá´‡Ê {message.from_user.mention}, <i>{wish}</i>\nÊœá´á´¡ á´„á´€É´ Éª Êœá´‡ÊŸá´˜ Êá´á´œ??</b>", reply_markup=InlineKeyboardMarkup(btn))
         return 
@@ -64,15 +64,15 @@ async def start(client, message):
     
     if (len(message.command) != 2) or (len(message.command) == 2 and message.command[1] == 'start'):
         buttons = [[
-            InlineKeyboardButton('â¤¬ Aá´…á´… Má´‡ Tá´ Yá´á´œÊ€ GÊ€á´á´œá´˜ â¤¬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
-                    InlineKeyboardButton('ðŸŒ¿ êœ±á´œá´˜á´˜á´Ê€á´›', callback_data="my_about"),
-                    InlineKeyboardButton('ðŸ‘¤ á´á´¡É´á´‡Ê€', callback_data='my_owner')
+                    InlineKeyboardButton('🌿 ꜱᴜᴘᴘᴏʀᴛ', callback_data="my_about"),
+                    InlineKeyboardButton('👤 ᴏᴡɴᴇʀ', callback_data='my_owner')
                 ],[
-                    InlineKeyboardButton('ðŸ Ò“á´‡á´€á´›á´œÊ€á´‡s', callback_data='help'),
-                    InlineKeyboardButton('ðŸ” á´˜Ê€á´‡á´Éªá´œá´', callback_data='buy_premium')
+                    InlineKeyboardButton('🍁 ғᴇᴀᴛᴜʀᴇs', callback_data='help'),
+                    InlineKeyboardButton('🔐 ᴘʀᴇᴍɪᴜᴍ', callback_data='buy_premium')
                 ],[
-                    InlineKeyboardButton('ðŸ’° á´‡á´€Ê€É´ á´á´É´á´‡Ê Ê™Ê Ê™á´á´› ðŸ’°', callback_data='earn')
+                    InlineKeyboardButton('💰 ᴇᴀʀɴ ᴍᴏɴᴇʏ ʙʏ ʙᴏᴛ 💰', callback_data='earn')
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -96,7 +96,7 @@ async def start(client, message):
             reply_markup = None
         else:
             btn = [[
-                InlineKeyboardButton("ðŸ“Œ Get File ðŸ“Œ", url=f'https://t.me/{temp.U_NAME}?start={verify_status["link"]}')
+                InlineKeyboardButton("📌 Get File 📌", url=f'https://t.me/{temp.U_NAME}?start={verify_status["link"]}')
             ]]
             reply_markup = InlineKeyboardMarkup(btn)
         await message.reply(f"âœ… You successfully verified until: {get_readable_time(VERIFY_EXPIRE)}", reply_markup=reply_markup, protect_content=True)
@@ -159,7 +159,7 @@ async def start(client, message):
             else:
                 btn = [[
                     InlineKeyboardButton('âš¡ï¸ á´œá´˜á´…á´€á´›á´‡s âš¡ï¸', url=UPDATES_LINK),
-                    InlineKeyboardButton('ðŸ’¡ êœ±á´œá´˜á´˜á´Ê€á´› ðŸ’¡', url=SUPPORT_LINK)
+                    InlineKeyboardButton('🌿 Sᴜᴘᴘᴏʀᴛ', url=SUPPORT_LINK)
                 ],[
                     InlineKeyboardButton('â‰ï¸ á´„ÊŸá´sá´‡ â‰ï¸', callback_data='close_data')
                 ]]
